@@ -4,8 +4,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.R
+import com.example.deliveryapp.fragments.PaymentFragment
 
 class CakesAdapter(val cakes: List<Cake>): RecyclerView.Adapter<BaseViewHolder>() {
 
@@ -27,6 +29,9 @@ class CakesAdapter(val cakes: List<Cake>): RecyclerView.Adapter<BaseViewHolder>(
 
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+        holder.itemView.setOnClickListener {
+            PaymentFragment.newInstance().show((holder.itemView.context as AppCompatActivity).supportFragmentManager,"Payment")
+        }
 
     }
 }

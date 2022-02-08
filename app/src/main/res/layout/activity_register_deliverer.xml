@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity"
     android:orientation="vertical"
     android:weightSum="4"
     android:background="@color/colorPrimary">
@@ -31,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="36dp"
-                android:text="Welcome"
+               android:text="Welcome"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/segoe_ui_bold"
                 android:textColor="@color/colorTextWhite"/>
@@ -39,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
-                android:text="Register to get started"
+                android:text="Give us Info"
                 android:fontFamily="@font/seg_ui_semibold"
                 android:textColor="@color/colorTextWhite"/>
         </LinearLayout>
@@ -59,7 +58,7 @@
             android:orientation="vertical"
             android:layout_centerVertical="true">
             <EditText
-                android:id="@+id/etFirstName"
+                android:id="@+id/dFirstName"
                 android:textColorHint="@color/colorPlaceholder"
                 android:layout_marginTop="6dp"
                 android:drawableEnd="@drawable/user_icon"
@@ -76,7 +75,7 @@
                 android:layout_marginLeft="48dp"
                 android:layout_marginRight="48dp"/>
             <EditText
-                android:id="@+id/etLastName"
+                android:id="@+id/dLastName"
                 android:textColorHint="@color/colorPlaceholder"
                 android:layout_marginTop="6dp"
                 android:drawableEnd="@drawable/lock_icon"
@@ -92,27 +91,10 @@
                 android:layout_height="52dp"
                 android:layout_marginLeft="48dp"
                 android:layout_marginRight="48dp"/>
-            <EditText
-                android:id="@+id/etRegisterEmail"
-                android:textColorHint="@color/colorPlaceholder"
-                android:drawableEnd="@drawable/user_icon"
-                android:drawableTint="@color/colorTextBlack"
-                android:hint="someone@gmail.com"
-                android:textColor="@color/colorTextBlack"
-                android:paddingLeft="26dp"
-                android:paddingRight="26dp"
-                android:inputType="textEmailAddress"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:background="@drawable/edit_text_background"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
 
 
             <EditText
-                android:id="@+id/etPhone"
+                android:id="@+id/dPhone"
                 android:textColorHint="@color/colorPlaceholder"
                 android:layout_marginTop="6dp"
                 android:drawableEnd="@drawable/lock_icon"
@@ -128,40 +110,8 @@
                 android:layout_height="52dp"
                 android:layout_marginLeft="48dp"
                 android:layout_marginRight="48dp"/>
-            <EditText
-                android:id="@+id/etPassword"
-                android:textColorHint="@color/colorPlaceholder"
-                android:layout_marginTop="6dp"
-                android:drawableEnd="@drawable/lock_icon"
-                android:drawableTint="@color/colorTextBlack"
-                android:hint="Password"
-                android:textColor="@color/colorTextBlack"
-                android:paddingLeft="26dp"
-                android:paddingRight="26dp"
-                android:inputType="textPassword"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:background="@drawable/edit_text_background"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
-            <EditText
-                android:id="@+id/etCPassword"
-                android:textColorHint="@color/colorPlaceholder"
-                android:layout_marginTop="6dp"
-                android:drawableEnd="@drawable/lock_icon"
-                android:drawableTint="@color/colorTextBlack"
-                android:hint="Confirm Password"
-                android:textColor="@color/colorTextBlack"
-                android:paddingLeft="26dp"
-                android:paddingRight="26dp"
-                android:inputType="textPassword"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:background="@drawable/edit_text_background"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -185,7 +135,7 @@
                     android:layout_width="0dp"
                     android:layout_height="52dp"
                     android:layout_weight="1"
-                    android:text="Sign Up"
+                    android:text="Join Us"
                     android:textAllCaps="false"
                     android:textColor="@color/colorButtonText"
                     android:textSize="16dp"
@@ -193,30 +143,8 @@
                     android:background="@drawable/button_background"/>
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_marginBottom="26dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorTextBlack"
-                android:textSize="18dp"
-                android:text="Already have an account?"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:layout_marginLeft="12dp" />
-            <TextView
-                android:id="@+id/tvLogin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorTextPrimary"
-                android:textSize="18dp"
-                android:text="Login instead"
-                android:fontFamily="@font/segoe_ui_bold"
-                android:layout_marginLeft="12dp"/>
-        </LinearLayout>
+
+
+
     </RelativeLayout>
 </LinearLayout>

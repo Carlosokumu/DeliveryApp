@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.deliveryapp.R
 import com.example.deliveryapp.adapters.Cake
 import com.example.deliveryapp.adapters.DinnersAdapter
@@ -27,6 +28,7 @@ class Drinks : Fragment() {
 
 
         _binding?.cakesrecyclerView?.adapter =DrinksAdapter(getCakes())
+        _binding?.cakesrecyclerView?.layoutManager = GridLayoutManager(requireContext(),2)
 
 
 

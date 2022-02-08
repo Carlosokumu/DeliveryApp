@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-
     android:layout_height="match_parent"
     android:background="@color/whiteuniv">
 
@@ -82,12 +81,20 @@
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appBar"
+        android:layout_height="match_parent">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/category"
-        android:layout_below="@+id/appBar"
         android:orientation="vertical">
 
 
@@ -239,6 +246,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
+                    android:id="@+id/offers"
                     android:layout_height="wrap_content">
                     <ImageView
                         android:layout_width="wrap_content"
@@ -246,6 +254,13 @@
                         android:layout_margin="10dp"
                         android:src="@drawable/offes"
                         android:layout_height="206dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/seg_ui_semibold"
+                        android:text="Check Out Our Offers"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
@@ -263,6 +278,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
+                    android:id="@+id/deliverer"
                     android:layout_height="wrap_content">
                     <ImageView
                         android:layout_width="202dp"
@@ -270,6 +286,13 @@
                         android:layout_margin="10dp"
                         android:src="@drawable/helmet"
                         android:layout_height="206dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:fontFamily="@font/seg_ui_semibold"
+                        android:text="Register As a Deliverer"
+                        android:layout_height="wrap_content"/>
 
                 </LinearLayout>
 
@@ -280,6 +303,67 @@
 
 
     </HorizontalScrollView>
+    </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:background="@color/whiteuniv"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:id="@+id/orders"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/orders" />
+
+            <View
+                android:layout_width="84dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/scrollbar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/person_linear_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/notifications"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_noti" />
+
+            <View
+                android:layout_width="84dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimaryDark"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
 
 
 </RelativeLayout>

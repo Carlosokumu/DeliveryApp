@@ -27,6 +27,7 @@ class CakesFragment() : Fragment() {
         val adapter = CakesAdapter(getCakes())
 
         _binding?.cakesrecyclerView?.adapter = adapter
+        _binding?.cakesrecyclerView?.layoutManager = GridLayoutManager(requireContext(),2)
 
 
 
