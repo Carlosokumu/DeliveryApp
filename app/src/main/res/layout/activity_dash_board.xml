@@ -85,6 +85,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/category"
         android:layout_below="@+id/appBar"
         android:orientation="vertical">
 
@@ -202,4 +203,80 @@
 
         </HorizontalScrollView>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/line"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_gravity="center"
+        android:layout_below="@+id/category"
+        android:alpha="0.2"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/scrollbar" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_marginBottom="4dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/line"
+                android:elevation="@dimen/margin_normal"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/whiteuniv"
+                android:background="@color/whiteuniv"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_below="@+id/line"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/offes"
+                        android:layout_height="206dp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/line"
+                android:elevation="@dimen/margin_normal"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/whiteuniv"
+                android:background="@color/whiteuniv"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="202dp"
+                        android:layout_below="@+id/line"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/helmet"
+                        android:layout_height="206dp"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
 </RelativeLayout>
