@@ -2,7 +2,6 @@ package com.example.deliveryapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import com.shashank.sony.fancywalkthroughlib.FancyWalkthroughActivity
 import com.shashank.sony.fancywalkthroughlib.FancyWalkthroughCard
 
@@ -67,7 +66,7 @@ class WalkThrough: FancyWalkthroughActivity(){
 
 
     override fun onFinishButtonPressed() {
-         startActivity(Intent(this,SignUp::class.java))
+         startActivity(Intent(this,SignIn::class.java))
     }
 
 }

@@ -14,7 +14,7 @@
         android:layout_weight="1">
 
         <ImageView
-            android:id="@+id/ivRegBack"
+            android:id="@+id/ivLoginBack"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_marginLeft="22dp"
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="36dp"
-                android:text="Welcome"
+                android:text="Welcome Back"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/segoe_ui_bold"
                 android:textColor="@color/colorTextWhite"/>
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
-                android:text="Register to get started"
+                android:text="We missed you! Login to get started"
                 android:fontFamily="@font/seg_ui_semibold"
                 android:textColor="@color/colorTextWhite"/>
         </LinearLayout>
@@ -51,57 +51,22 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:background="@drawable/card_background">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
-            android:layout_marginTop="36dp"
-            android:fontFamily="@font/seg_ui_semibold"
-            android:text="Register"
             android:textColor="@color/colorTextBlack"
-            android:textSize="26dp" />
+            android:textSize="26dp"
+            android:text="LOGIN"
+            android:fontFamily="@font/seg_ui_semibold"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="48dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_centerVertical="true">
             <EditText
-                android:id="@+id/etFirstName"
-                android:textColorHint="@color/colorPlaceholder"
-                android:layout_marginTop="6dp"
-                android:drawableEnd="@drawable/user_icon"
-                android:drawableTint="@color/colorTextBlack"
-                android:hint="FirstName"
-                android:textColor="@color/colorTextBlack"
-                android:paddingLeft="26dp"
-                android:paddingRight="26dp"
-                android:inputType="text"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:background="@drawable/edit_text_background"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
-            <EditText
-                android:id="@+id/etLastName"
-                android:textColorHint="@color/colorPlaceholder"
-                android:layout_marginTop="6dp"
-                android:drawableEnd="@drawable/lock_icon"
-                android:drawableTint="@color/colorTextBlack"
-                android:hint="LastName"
-                android:textColor="@color/colorTextBlack"
-                android:paddingLeft="26dp"
-                android:paddingRight="26dp"
-                android:inputType="text"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:background="@drawable/edit_text_background"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
-            <EditText
-                android:id="@+id/etRegisterEmail"
+                android:id="@+id/etEmail"
                 android:textColorHint="@color/colorPlaceholder"
                 android:drawableEnd="@drawable/user_icon"
                 android:drawableTint="@color/colorTextBlack"
@@ -114,32 +79,12 @@
                 android:background="@drawable/edit_text_background"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
-
-
-            <EditText
-                android:id="@+id/etPhone"
-                android:textColorHint="@color/colorPlaceholder"
-                android:layout_marginTop="6dp"
-                android:drawableEnd="@drawable/lock_icon"
-                android:drawableTint="@color/colorTextBlack"
-                android:hint="Phone"
-                android:textColor="@color/colorTextBlack"
-                android:paddingLeft="26dp"
-                android:paddingRight="26dp"
-                android:inputType="phone"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:background="@drawable/edit_text_background"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
                 android:layout_marginLeft="48dp"
                 android:layout_marginRight="48dp"/>
             <EditText
-                android:id="@+id/etPassword"
+                android:id="@+id/etLoginPassword"
                 android:textColorHint="@color/colorPlaceholder"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="24dp"
                 android:drawableEnd="@drawable/lock_icon"
                 android:drawableTint="@color/colorTextBlack"
                 android:hint="Password"
@@ -153,30 +98,24 @@
                 android:layout_height="52dp"
                 android:layout_marginLeft="48dp"
                 android:layout_marginRight="48dp"/>
-            <EditText
-                android:id="@+id/etCPassword"
-                android:textColorHint="@color/colorPlaceholder"
-                android:layout_marginTop="6dp"
-                android:drawableEnd="@drawable/lock_icon"
-                android:drawableTint="@color/colorTextBlack"
-                android:hint="Confirm Password"
-                android:textColor="@color/colorTextBlack"
-                android:paddingLeft="26dp"
-                android:paddingRight="26dp"
-                android:inputType="textPassword"
-                android:fontFamily="@font/seg_ui_semibold"
-                android:background="@drawable/edit_text_background"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
+
+            <CheckBox
+                android:buttonTint="@color/colorBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="48dp"
-                android:layout_marginRight="48dp"/>
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/seg_ui_semibold"
+                android:text="Remember me"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="18dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="24dp"
                 android:layout_marginLeft="48dp"
                 android:layout_marginRight="48dp">
                 <TextView
@@ -189,11 +128,11 @@
                     android:layout_marginLeft="12dp"
                     android:layout_weight="1" />
                 <Button
-                    android:id="@+id/btnRegister"
+                    android:id="@+id/btnLogin"
                     android:layout_width="0dp"
                     android:layout_height="52dp"
                     android:layout_weight="1"
-                    android:text="Sign Up"
+                    android:text="Sign In"
                     android:textAllCaps="false"
                     android:textColor="@color/colorButtonText"
                     android:textSize="16dp"
@@ -213,16 +152,16 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTextBlack"
                 android:textSize="18dp"
-                android:text="Already have an account?"
+                android:text="Don't have an account?"
                 android:fontFamily="@font/seg_ui_semibold"
                 android:layout_marginLeft="12dp" />
             <TextView
-                android:id="@+id/tvLogin"
+                android:id="@+id/tvRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTextPrimary"
                 android:textSize="18dp"
-                android:text="Login instead"
+                android:text="Register instead"
                 android:fontFamily="@font/segoe_ui_bold"
                 android:layout_marginLeft="12dp"/>
         </LinearLayout>
