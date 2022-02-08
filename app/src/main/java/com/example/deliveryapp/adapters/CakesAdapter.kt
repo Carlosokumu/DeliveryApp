@@ -7,16 +7,12 @@ import android.widget.Adapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.R
 
-class CakesAdapter: RecyclerView.Adapter<BaseViewHolder>() {
-
-    private lateinit var cakes:  List<Cake>
+class CakesAdapter(val cakes: List<Cake>): RecyclerView.Adapter<BaseViewHolder>() {
 
 
-    fun setCakes(cakes: List<Cake>){
-          this.cakes = cakes
-    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
+
+    override  fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
           val view = LayoutInflater.from(parent.context).inflate(R.layout.row_items,
         parent,
         false)

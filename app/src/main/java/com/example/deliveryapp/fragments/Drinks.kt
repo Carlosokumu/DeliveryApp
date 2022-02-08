@@ -6,18 +6,42 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.deliveryapp.R
+import com.example.deliveryapp.adapters.Cake
+import com.example.deliveryapp.adapters.DinnersAdapter
+import com.example.deliveryapp.adapters.DrinksAdapter
+import com.example.deliveryapp.databinding.FragmentDinnerBinding
+import com.example.deliveryapp.databinding.FragmentDrinksBinding
 
 
 class Drinks : Fragment() {
 
 
+
+    private var _binding: FragmentDrinksBinding?= null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_drinks, container, false)
+        _binding = FragmentDrinksBinding.inflate(layoutInflater, container, false)
+
+
+        _binding?.cakesrecyclerView?.adapter =DrinksAdapter(getCakes())
+
+
+
+        return  _binding?.root
     }
+
+
+
+
+    fun getCakes() = listOf<Cake>(
+
+        Cake("Strawberry"),
+        Cake("Strawberry"), Cake("Strawberry")
+    )
+
 
 
 }

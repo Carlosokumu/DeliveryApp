@@ -8,7 +8,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,13 +31,13 @@
                 app:civ_border_width="2dp"
                 android:layout_margin="20dp"
                 android:src="@drawable/dinner"
-                android:layout_centerInParent="true"
-                android:scaleType="center"/>
+                android:layout_centerInParent="true"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <TextView
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Flavor"
                 android:elevation="4dp"
                 android:layout_marginLeft="@dimen/margin_normal"
                 android:padding="12dp"
@@ -57,6 +57,6 @@
 
         </RelativeLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

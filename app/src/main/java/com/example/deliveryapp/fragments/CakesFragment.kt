@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.deliveryapp.R
 import com.example.deliveryapp.adapters.Cake
 import com.example.deliveryapp.adapters.CakesAdapter
@@ -23,9 +24,10 @@ class CakesFragment() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCakesBinding.inflate(layoutInflater, container, false)
-        val adapter = CakesAdapter()
-        adapter.setCakes(getCakes())
-        _binding?.cakesrecyclerView?.adapter = CakesAdapter()
+        val adapter = CakesAdapter(getCakes())
+
+        _binding?.cakesrecyclerView?.adapter = adapter
+
 
 
 

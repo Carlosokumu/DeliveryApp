@@ -1,8 +1,10 @@
 package com.example.deliveryapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.commit
 import com.example.deliveryapp.databinding.ActivityDashBoardBinding
 import com.example.deliveryapp.databinding.ActivitySignInBinding
@@ -15,8 +17,9 @@ class DashBoard : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding:  ActivityDashBoardBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dash_board)
         binding = ActivityDashBoardBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
 
 
         binding.cakes.setOnClickListener(this)
@@ -30,13 +33,16 @@ class DashBoard : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         when(view){
             binding.cakes ->{
-                
+                 val intent = Intent(this,ItemsManager::class.java).putExtra("WHAT","cake")
+                startActivity(intent)
             }
             binding.dinner ->{
-
+                val intent = Intent(this,ItemsManager::class.java).putExtra("WHAT","dinner")
+                startActivity(intent)
             }
             binding.drinks ->{
-
+                val intent = Intent(this,ItemsManager::class.java).putExtra("WHAT","drinks")
+                startActivity(intent)
             }
         }
     }
