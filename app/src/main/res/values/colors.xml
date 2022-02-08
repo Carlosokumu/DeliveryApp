@@ -20,4 +20,6 @@
     <color name="colorButtonText">#ffffff</color>
     <color name="colorPlaceholder">#505050</color>
     <color name="colorTextPrimary">#0E68FF</color>
+    <color name="whiteuniv">#e9e6f5</color>
+    <color name="border">#4041434e</color>
 </resources>
