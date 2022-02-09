@@ -87,7 +87,7 @@ class SignUpActivity : AppCompatActivity() {
 
                     databaseReference.child("users").child(uid)
                         .updateChildren(userMap).addOnCompleteListener {
-                            val intent = Intent(this, MainActivity::class.java)
+                            val intent = Intent(this, DashBoard::class.java)
                             startActivity(intent)
                             Toast.makeText(
                                 this, "Registration Successful",

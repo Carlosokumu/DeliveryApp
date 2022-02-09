@@ -11,17 +11,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+ 
+        <activity
+            android:name=".CategoriesActivity"
+            android:exported="false" />
+
         <activity android:name=".OderList"></activity>
         <activity android:name=".AdminSection" />
         <activity android:name=".RegisterDeliverer" />
         <activity android:name=".ItemsManager" />
+ 
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity android:name=".SignIn" />
+        <activity android:name=".DashBoard" />
         <activity android:name=".WalkThrough" />
+
+        <activity
+            android:name=".Splash"
+            android:exported="true">
+
         <activity android:name=".DashBoard" />
         <activity android:name=".Splash">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

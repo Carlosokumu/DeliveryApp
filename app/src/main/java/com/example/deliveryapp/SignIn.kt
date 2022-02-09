@@ -49,10 +49,17 @@ class SignIn : AppCompatActivity() {
                 if (task.isSuccessful) {
                     //end dialog
 //                    dialog.isDismiss()
+
+                        val intent = Intent(this, DashBoard::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+
                     val intent = Intent(this, DashBoard::class.java)
                     startActivity(intent)
                     finish()
                 } else {
+
 //                    Close Dialog
 //                    dialog.isDismiss()
                     Toast.makeText(

@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android/2 WORK/DeliveryApp/app/src/main/res/layout/activity_categories.xml" value="0.25" />
+        <entry key="..\:/android/2 WORK/DeliveryApp/app/src/main/res/layout/activity_dash_board.xml" value="0.24615384615384617" />
         <entry key="..\:/android/2 WORK/DeliveryApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/android/2 WORK/DeliveryApp/app/src/main/res/layout/activity_sign_in.xml" value="0.22962962962962963" />
         <entry key="..\:/android/2 WORK/DeliveryApp/app/src/main/res/layout/activity_sign_up.xml" value="0.176" />
         <entry key="..\:/android/2 WORK/DeliveryApp/app/src/main/res/layout/activity_splash.xml" value="0.2351851851851852" />
+        <entry key="..\:/android/2 WORK/DeliveryApp/app/src/main/res/layout/items_layout.xml" value="0.25" />
       </map>
     </option>
   </component>
