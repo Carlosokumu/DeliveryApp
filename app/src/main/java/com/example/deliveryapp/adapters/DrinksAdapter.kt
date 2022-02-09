@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.R
 import com.example.deliveryapp.fragments.PaymentFragment
 import com.example.deliveryapp.models.CakeModel
+import com.example.deliveryapp.utils.Extensions.asOderInfo
+import com.google.firebase.auth.FirebaseAuth
 
 class DrinksAdapter(val cakes: List<CakeModel>): RecyclerView.Adapter<BaseViewHolder>() {
 
@@ -29,7 +31,7 @@ class DrinksAdapter(val cakes: List<CakeModel>): RecyclerView.Adapter<BaseViewHo
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
         holder.itemView.setOnClickListener {
-            PaymentFragment.newInstance().show((holder.itemView.context as AppCompatActivity).supportFragmentManager,"Payment")
+            PaymentFragment.newInstance(cakes[position].asOderInfo(FirebaseAuth.getInstance().currentUser?.displayName!!)).show((holder.itemView.context as AppCompatActivity).supportFragmentManager,"Payment")
         }
 
     }

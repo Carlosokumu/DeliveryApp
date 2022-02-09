@@ -11,6 +11,7 @@ import com.example.deliveryapp.adapters.CakesAdapter
 import com.example.deliveryapp.adapters.OdersAdapter
 import com.example.deliveryapp.databinding.FragmentCakesBinding
 import com.example.deliveryapp.databinding.FragmentClientOrdersBinding
+import com.example.deliveryapp.utils.ObjectBox
 
 
 class ClientOrders : Fragment() {
@@ -21,11 +22,12 @@ class ClientOrders : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentClientOrdersBinding.inflate(layoutInflater, container, false)
-        if (getDummyList().isEmpty()){
-            _binding?.empty?.visibility= View.VISIBLE
+        if ( ObjectBox.store.boxFor(OrderInfo::class.java).all.isEmpty()){
+            _binding?.clientOrder?.visibility = View.GONE
         }
         else {
-            val adapter = OdersAdapter(getDummyList())
+            val adapter = OdersAdapter( ObjectBox.store.boxFor(OrderInfo::class.java).all)
+             _binding?.clientOrder?.visibility = View.GONE
             _binding?.recyclerOrders?.adapter =  adapter
         }
 
@@ -39,12 +41,12 @@ class ClientOrders : Fragment() {
 
 
 
-    fun getDummyList() =
-         listOf(
-            OrderInfo("Queen Cake","Ezra Mochiemo","100"),
-            OrderInfo("Queen Cake","Ezra Mochiemo","100"),
-            OrderInfo("Queen Cake","Ezra Mochiemo","100"),
-        )
+//    fun getDummyList() =
+//         listOf(
+//            OrderInfo("Queen Cake","Ezra Mochiemo","100"),
+//            OrderInfo("Queen Cake","Ezra Mochiemo","100"),
+//            OrderInfo("Queen Cake","Ezra Mochiemo","100"),
+//        )
 
 
 

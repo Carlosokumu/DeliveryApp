@@ -1,11 +1,18 @@
 package com.example.deliveryapp
 
+import io.objectbox.annotation.Entity
+import io.objectbox.annotation.Id
+
+@Entity
+data class OrderInfo(
 
 
+     @Id
+     var id: Long = 0,
+    var name: String,
+    var orderedBy: String,
+    var price: String,
 
-data class OrderInfo(val name: String,
-    val orderedBy: String,
-   val price: String,
 
 ) {
 }

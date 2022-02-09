@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:textColor="@color/black"
             android:fontFamily="@font/lato"
-            android:id="@+id/placeOder"
+            android:id="@+id/btnplaceOder"
             android:layout_marginTop="@dimen/margin_normal"
             android:padding="@dimen/margin_small"
             android:text="Place Order"

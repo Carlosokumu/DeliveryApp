@@ -39,11 +39,12 @@ class DeliverersList : Fragment() {
                  call: Call<List<DelivererInfo>>,
                  response: Response<List<DelivererInfo>>
              ) {
-                     if (response.body().isEmpty()){
+                     if (response.body()!!.isEmpty()){
                          _binding?.empty?.visibility= View.VISIBLE
                      }
                      else{
-                              val adapter = DeliverersAdapters(response.body())
+                              val adapter = DeliverersAdapters(response.body()!!)
+                              _binding?.no?.visibility= View.GONE
                               _binding?.recyclerOrders?.adapter =  adapter
 
                      }
