@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.example.deliveryapp.databinding.ActivityDashBoardBinding
 import com.example.deliveryapp.databinding.ActivityRegisterDelivererBinding
 import com.sdsmdg.tastytoast.TastyToast
 import retrofit2.Call
