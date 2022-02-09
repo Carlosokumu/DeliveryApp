@@ -28,4 +28,7 @@ class DelivererVm(): ViewModel() {
 
 
 
+    fun getDelivers() = apiService.getDeliverers()
+
+
 }

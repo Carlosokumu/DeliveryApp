@@ -10,12 +10,12 @@ import retrofit2.http.POST
 interface ApiService {
 
 
-    @GET("deliverers")
-    suspend fun getBlog(): List<DelivererInfo>
+    @GET("/deliverer")
+     fun getDeliverers(): Call<List<DelivererInfo>>
 
 
     @FormUrlEncoded
-    @POST("deliverer/signup")
+    @POST("/deliverer/register")
     fun registerDeliverer(
         @Field("firstName") firstName: String,
         @Field("secondName") email: String,

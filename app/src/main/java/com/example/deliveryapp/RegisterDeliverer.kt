@@ -3,6 +3,7 @@ package com.example.deliveryapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
@@ -15,12 +16,14 @@ import retrofit2.Response
 
 class RegisterDeliverer : AppCompatActivity(), View.OnClickListener {
 
-    private val viewModel = ViewModelProvider(this).get(DelivererVm::class.java)
+
     private lateinit var binding: ActivityRegisterDelivererBinding
+    private lateinit var viewModel: DelivererVm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterDelivererBinding.inflate(layoutInflater)
+         viewModel = ViewModelProvider(this).get(DelivererVm::class.java)
         setContentView(binding.root)
         binding.btnRegister.setOnClickListener(this)
 
@@ -48,13 +51,26 @@ class RegisterDeliverer : AppCompatActivity(), View.OnClickListener {
             viewModel.registerDeliverer(firstName, lastName, phone).enqueue(object :
                 Callback<Success> {
                 override fun onResponse(call: Call<Success>, response: Response<Success>) {
-                    TastyToast.makeText(
-                        this@RegisterDeliverer,
-                        "Check Your fields",
-                        TastyToast.LENGTH_SHORT,
-                        TastyToast.SUCCESS
-                    ).show()
-                    startActivity(Intent(this@RegisterDeliverer,DashBoard::class.java))
+
+                    if (response.isSuccessful){
+                        TastyToast.makeText(
+                            this@RegisterDeliverer,
+                            "Sucessfully registerd",
+                            TastyToast.LENGTH_SHORT,
+                            TastyToast.SUCCESS
+                        ).show()
+                        startActivity(Intent(this@RegisterDeliverer,DashBoard::class.java))
+                    }
+                    else{
+                        TastyToast.makeText(
+                            this@RegisterDeliverer,
+                            "Something went Wrong",
+                            TastyToast.LENGTH_SHORT,
+                            TastyToast.ERROR
+                        ).show()
+                        Log.d("Buggggg",response.errorBody().toString())
+                    }
+
                 }
 
                 override fun onFailure(call: Call<Success>, t: Throwable) {

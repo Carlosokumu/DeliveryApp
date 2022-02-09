@@ -32,8 +32,8 @@ class DeliverersAdapters(val cakes: List<DelivererInfo>): RecyclerView.Adapter<B
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
 
-             holder.itemView.findViewById<TextView>(R.id.deliverer).setText(cakes[position].name)
-             holder.itemView.findViewById<TextView>(R.id.phoneD).setText(cakes[position].phone)
+             holder.itemView.findViewById<TextView>(R.id.deliverer).setText(cakes[position].firstName)
+             holder.itemView.findViewById<TextView>(R.id.phoneD).setText(cakes[position].phoneNumber)
              // holder.itemView.findViewById<TextView>(R.id.phoneD).setText(cakes[position].phone)
     }
 }
