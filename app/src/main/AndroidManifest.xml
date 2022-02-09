@@ -28,11 +28,9 @@
         <activity android:name=".DashBoard" />
         <activity android:name=".WalkThrough" />
 
-        <activity
-            android:name=".Splash"
-            android:exported="true">
 
-        <activity android:name=".DashBoard" />
+
+        
         <activity android:name=".Splash">
 
             <intent-filter>

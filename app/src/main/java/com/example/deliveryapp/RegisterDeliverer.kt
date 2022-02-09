@@ -1,5 +1,6 @@
 package com.example.deliveryapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -47,11 +48,22 @@ class RegisterDeliverer : AppCompatActivity(), View.OnClickListener {
             viewModel.registerDeliverer(firstName, lastName, phone).enqueue(object :
                 Callback<Success> {
                 override fun onResponse(call: Call<Success>, response: Response<Success>) {
-
+                    TastyToast.makeText(
+                        this@RegisterDeliverer,
+                        "Check Your fields",
+                        TastyToast.LENGTH_SHORT,
+                        TastyToast.SUCCESS
+                    ).show()
+                    startActivity(Intent(this@RegisterDeliverer,DashBoard::class.java))
                 }
 
                 override fun onFailure(call: Call<Success>, t: Throwable) {
-
+                    TastyToast.makeText(
+                        this@RegisterDeliverer,
+                        "Something went Wrong",
+                        TastyToast.LENGTH_SHORT,
+                        TastyToast.ERROR
+                    ).show()
                 }
 
             })
