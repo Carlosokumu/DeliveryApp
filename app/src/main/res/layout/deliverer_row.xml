@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="@dimen/margin_normal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/margin_normal"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Name: "
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/deliverer"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@color/black"
+            android:text="Okumu Carlos"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_normal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Phone Number:"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/phoneD"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@color/black"
+            android:text="+254705136690"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_normal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Availability"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:text="Available"
+            android:id="@+id/availability"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/scrollbar" />
+</LinearLayout>
