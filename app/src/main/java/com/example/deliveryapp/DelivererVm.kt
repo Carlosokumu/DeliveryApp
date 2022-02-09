@@ -24,18 +24,8 @@ class DelivererVm(): ViewModel() {
 
 
 
-    fun registerDeliverer(firstName: String,secondName: String,phoneNumber: String){
-          apiService.registerDeliverer(firstName,secondName,phoneNumber).enqueue(object : Callback<Success>{
-              override fun onResponse(call: Call<Success>, response: Response<Success>) {
+    fun registerDeliverer(firstName: String,secondName: String,phoneNumber: String) = apiService.registerDeliverer(firstName,secondName,phoneNumber)
 
-              }
-
-              override fun onFailure(call: Call<Success>, t: Throwable) {
-
-              }
-
-          })
-    }
 
 
 }
