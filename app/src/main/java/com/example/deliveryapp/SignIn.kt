@@ -58,14 +58,6 @@ class SignIn : AppCompatActivity() {
                     val intent = Intent(this, DashBoard::class.java)
                     startActivity(intent)
                     finish()
-                } else {
-
-//                    Close Dialog
-//                    dialog.isDismiss()
-                    Toast.makeText(
-                        this, "Error!${task.exception}",
-                        Toast.LENGTH_SHORT
-                    ).show()
                 }
             }
         }

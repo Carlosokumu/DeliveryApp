@@ -39,7 +39,7 @@ class Drinks : Fragment() {
 
 
 
-    fun getDrinks(): List<CakeModel> {
+    private fun getDrinks(): List<CakeModel> {
         val cakes = mutableListOf<CakeModel>()
         cakes.add(CakeModel("KenyaCane","150",R.drawable.cake))
         cakes.add(CakeModel("Cocacola","450",R.drawable.cake))
