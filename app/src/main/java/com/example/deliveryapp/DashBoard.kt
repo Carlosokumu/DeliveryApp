@@ -17,6 +17,17 @@ class DashBoard : AppCompatActivity() {
 
         binding.cakes.setOnClickListener {
             val intent = Intent(this,CategoriesActivity::class.java)
+            intent.putExtra("key","cakes")
+            startActivity(intent)
+        }
+        binding.drinks.setOnClickListener {
+            val intent = Intent(this,CategoriesActivity::class.java)
+            intent.putExtra("key","drinks")
+            startActivity(intent)
+        }
+        binding.dinner.setOnClickListener {
+            val intent = Intent(this,CategoriesActivity::class.java)
+            intent.putExtra("key","dinner")
             startActivity(intent)
         }
     }
