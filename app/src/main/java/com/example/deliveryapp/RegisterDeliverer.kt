@@ -3,13 +3,15 @@ package com.example.deliveryapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.activity.viewModels
+import androidx.lifecycle.ViewModelProvider
 import com.example.deliveryapp.databinding.ActivityDashBoardBinding
 import com.example.deliveryapp.databinding.ActivityRegisterDelivererBinding
 import com.sdsmdg.tastytoast.TastyToast
 
 class RegisterDeliverer : AppCompatActivity(), View.OnClickListener {
 
-
+    private val viewModel = ViewModelProvider(this).get(DelivererVm::class.java)
     private lateinit var binding: ActivityRegisterDelivererBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +19,7 @@ class RegisterDeliverer : AppCompatActivity(), View.OnClickListener {
         binding = ActivityRegisterDelivererBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnRegister.setOnClickListener(this)
+        viewModel.res
     }
 
 
