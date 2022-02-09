@@ -72,7 +72,7 @@ class SignIn : AppCompatActivity() {
                     if (task.isSuccessful) {
                         //end dialog
 //                    dialog.isDismiss()
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, DashBoard::class.java)
                         startActivity(intent)
                         finish()
                     } else {
