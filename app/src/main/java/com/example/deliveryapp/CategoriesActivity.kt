@@ -3,10 +3,9 @@ package com.example.deliveryapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.deliveryapp.adapters.CakeAdapter
+import com.example.deliveryapp.adapters.ItemAdapter
 import com.example.deliveryapp.databinding.ActivityCategoriesBinding
-import com.example.deliveryapp.models.CakeModel
+import com.example.deliveryapp.models.ItemsModel
 
 class CategoriesActivity : AppCompatActivity() {
 
@@ -34,17 +33,17 @@ class CategoriesActivity : AppCompatActivity() {
                 val recyclerView = binding.recycler
                 recyclerView.layoutManager = LinearLayoutManager(this)
 
-                val cakes = ArrayList<CakeModel>()
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("WhiteForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+                val cakes = ArrayList<ItemsModel>()
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("WhiteForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
 
-                val adapter = CakeAdapter(cakes)
+                val adapter = ItemAdapter(cakes)
                 recyclerView.adapter = adapter
             }
 
@@ -52,17 +51,17 @@ class CategoriesActivity : AppCompatActivity() {
                 val recyclerView = binding.recycler
                 recyclerView.layoutManager = LinearLayoutManager(this)
 
-                val cakes = ArrayList<CakeModel>()
-                cakes.add(CakeModel("KenyaCane","150",R.drawable.cake))
-                cakes.add(CakeModel("Cocacola","450",R.drawable.cake))
-                cakes.add(CakeModel("Sprite","450",R.drawable.cake))
-                cakes.add(CakeModel("JohnWalker","450",R.drawable.cake))
-                cakes.add(CakeModel("RedLabel","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+                val cakes = ArrayList<ItemsModel>()
+                cakes.add(ItemsModel("KenyaCane","150",R.drawable.cake))
+                cakes.add(ItemsModel("Cocacola","450",R.drawable.cake))
+                cakes.add(ItemsModel("Sprite","450",R.drawable.cake))
+                cakes.add(ItemsModel("JohnWalker","450",R.drawable.cake))
+                cakes.add(ItemsModel("RedLabel","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
 
-                val adapter = CakeAdapter(cakes)
+                val adapter = ItemAdapter(cakes)
                 recyclerView.adapter = adapter
 
             }
@@ -71,17 +70,17 @@ class CategoriesActivity : AppCompatActivity() {
                 val recyclerView = binding.recycler
                 recyclerView.layoutManager = LinearLayoutManager(this)
 
-                val cakes = ArrayList<CakeModel>()
-                cakes.add(CakeModel("Sushi","450",R.drawable.cake))
-                cakes.add(CakeModel("Cavier","450",R.drawable.cake))
-                cakes.add(CakeModel("French Fries","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-                cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+                val cakes = ArrayList<ItemsModel>()
+                cakes.add(ItemsModel("Sushi","450",R.drawable.cake))
+                cakes.add(ItemsModel("Cavier","450",R.drawable.cake))
+                cakes.add(ItemsModel("French Fries","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
+                cakes.add(ItemsModel("BlackForest","450",R.drawable.cake))
 
-                val adapter = CakeAdapter(cakes)
+                val adapter = ItemAdapter(cakes)
                 recyclerView.adapter = adapter
 
             }

@@ -1,16 +1,14 @@
 package com.example.deliveryapp.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.R
 import com.example.deliveryapp.fragments.PaymentFragment
-import com.example.deliveryapp.models.CakeModel
+import com.example.deliveryapp.models.ItemsModel
 
-class CakesAdapter(val cakesList: List<CakeModel>): RecyclerView.Adapter<BaseViewHolder>() {
+class CakesAdapter(val cakesList: List<ItemsModel>): RecyclerView.Adapter<BaseViewHolder>() {
 
 
 

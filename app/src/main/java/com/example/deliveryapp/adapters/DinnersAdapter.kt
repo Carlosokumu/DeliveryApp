@@ -2,15 +2,13 @@ package com.example.deliveryapp.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.R
 import com.example.deliveryapp.fragments.PaymentFragment
-import com.example.deliveryapp.models.CakeModel
+import com.example.deliveryapp.models.ItemsModel
 
-class DinnersAdapter(val cakes: List<CakeModel>): RecyclerView.Adapter<BaseViewHolder>() {
+class DinnersAdapter(val items: List<ItemsModel>): RecyclerView.Adapter<BaseViewHolder>() {
 
 
 
@@ -27,7 +25,7 @@ class DinnersAdapter(val cakes: List<CakeModel>): RecyclerView.Adapter<BaseViewH
 
 
     override fun getItemCount(): Int {
-        return cakes.size
+        return items.size
     }
 
 
