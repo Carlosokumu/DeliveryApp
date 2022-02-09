@@ -12,6 +12,7 @@ import com.example.deliveryapp.adapters.CakesAdapter
 import com.example.deliveryapp.adapters.DinnersAdapter
 import com.example.deliveryapp.databinding.FragmentCakesBinding
 import com.example.deliveryapp.databinding.FragmentDinnerBinding
+import com.example.deliveryapp.models.CakeModel
 
 
 class DinnerFragment : Fragment() {
@@ -24,7 +25,7 @@ class DinnerFragment : Fragment() {
         _binding = FragmentDinnerBinding.inflate(layoutInflater, container, false)
 
 
-        _binding?.cakesrecyclerView?.adapter = DinnersAdapter(getCakes())
+        _binding?.cakesrecyclerView?.adapter = DinnersAdapter(getDinner())
         _binding?.cakesrecyclerView?.layoutManager = GridLayoutManager(requireContext(),2)
 
 
@@ -33,11 +34,19 @@ class DinnerFragment : Fragment() {
     }
 
 
-    fun getCakes() = listOf<Cake>(
+    fun getDinner(): List<CakeModel>{
+        val cakes = mutableListOf<CakeModel>()
+        cakes.add(CakeModel("Sushi","450",R.drawable.cake))
+        cakes.add(CakeModel("Cavier","450",R.drawable.cake))
+        cakes.add(CakeModel("French Fries","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        return cakes
+    }
 
-        Cake("Strawberry"),
-        Cake("Strawberry"), Cake("Strawberry")
-    )
 
 
 

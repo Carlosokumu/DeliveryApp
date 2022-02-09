@@ -8,8 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.R
 import com.example.deliveryapp.fragments.PaymentFragment
+import com.example.deliveryapp.models.CakeModel
 
-class CakesAdapter(val cakes: List<Cake>): RecyclerView.Adapter<BaseViewHolder>() {
+class CakesAdapter(val cakesList: List<CakeModel>): RecyclerView.Adapter<BaseViewHolder>() {
 
 
 
@@ -24,7 +25,7 @@ class CakesAdapter(val cakes: List<Cake>): RecyclerView.Adapter<BaseViewHolder>(
 
 
     override fun getItemCount(): Int {
-        return cakes.size
+        return cakesList.size
     }
 
 

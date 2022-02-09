@@ -11,13 +11,12 @@ import com.example.deliveryapp.R
 import com.example.deliveryapp.adapters.Cake
 import com.example.deliveryapp.adapters.CakesAdapter
 import com.example.deliveryapp.databinding.FragmentCakesBinding
+import com.example.deliveryapp.models.CakeModel
 
 
 class CakesFragment() : Fragment() {
 
     private var _binding: FragmentCakesBinding?= null
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,10 +35,21 @@ class CakesFragment() : Fragment() {
     }
 
 
-    fun getCakes() = listOf<Cake>(
+    fun getCakes(): List<CakeModel> {
+        val cakes = mutableListOf<CakeModel>()
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("WhiteForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        return cakes
+    }
 
-        Cake("Strawberry"),
-        Cake("Strawberry"),Cake("Strawberry")
-    )
+
+
+
 
 }

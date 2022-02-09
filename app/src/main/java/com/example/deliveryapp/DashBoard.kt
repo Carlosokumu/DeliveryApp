@@ -3,41 +3,12 @@ package com.example.deliveryapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
-import com.example.deliveryapp.databinding.ActivityDashBoardBinding
-
-class DashBoard : AppCompatActivity() {
-
-    private lateinit var binding: ActivityDashBoardBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        binding = ActivityDashBoardBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.cakes.setOnClickListener {
-            val intent = Intent(this,CategoriesActivity::class.java)
-            intent.putExtra("key","cakes")
-            startActivity(intent)
-        }
-        binding.drinks.setOnClickListener {
-            val intent = Intent(this,CategoriesActivity::class.java)
-            intent.putExtra("key","drinks")
-            startActivity(intent)
-        }
-        binding.dinner.setOnClickListener {
-            val intent = Intent(this,CategoriesActivity::class.java)
-            intent.putExtra("key","dinner")
-            startActivity(intent)
-
 import android.view.View
-import android.widget.Toast
-import androidx.fragment.app.commit
+
 import com.example.deliveryapp.databinding.ActivityDashBoardBinding
-import com.example.deliveryapp.databinding.ActivitySignInBinding
-import com.example.deliveryapp.databinding.ActivitySignUpBinding
-import com.example.deliveryapp.fragments.CakesFragment
+
+
+
 
 class DashBoard : AppCompatActivity(), View.OnClickListener {
 

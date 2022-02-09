@@ -8,8 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.R
 import com.example.deliveryapp.fragments.PaymentFragment
+import com.example.deliveryapp.models.CakeModel
 
-class DinnersAdapter(val cakes: List<Cake>): RecyclerView.Adapter<BaseViewHolder>() {
+class DinnersAdapter(val cakes: List<CakeModel>): RecyclerView.Adapter<BaseViewHolder>() {
 
 
 
