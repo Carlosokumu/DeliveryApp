@@ -98,5 +98,7 @@ dependencies {
 
     // Kotlin
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
+    //lottie
+    implementation 'com.airbnb.android:lottie:3.0.7'
 
 }

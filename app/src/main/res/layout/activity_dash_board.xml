@@ -53,7 +53,7 @@
                         android:textSize="24sp" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/profileImage"
+                        android:id="@+id/adminSection"
                         roundedCornerRadius="10dp"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
@@ -282,7 +282,6 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:layout_width="202dp"
-                        android:layout_below="@+id/line"
                         android:layout_margin="10dp"
                         android:src="@drawable/helmet"
                         android:layout_height="206dp"/>

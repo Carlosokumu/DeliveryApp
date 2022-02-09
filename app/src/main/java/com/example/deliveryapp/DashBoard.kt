@@ -25,7 +25,8 @@ class DashBoard : AppCompatActivity(), View.OnClickListener {
         binding.cakes.setOnClickListener(this)
         binding.dinner.setOnClickListener(this)
         binding.drinks.setOnClickListener(this)
-
+        binding.adminSection.setOnClickListener(this)
+        binding.deliverer.setOnClickListener(this)
 
 
     }
@@ -42,6 +43,14 @@ class DashBoard : AppCompatActivity(), View.OnClickListener {
             }
             binding.drinks ->{
                 val intent = Intent(this,ItemsManager::class.java).putExtra("WHAT","drinks")
+                startActivity(intent)
+            }
+            binding.adminSection ->{
+                val intent = Intent(this,AdminSection::class.java)
+                startActivity(intent)
+            }
+            binding.deliverer ->{
+                val intent = Intent(this,RegisterDeliverer::class.java)
                 startActivity(intent)
             }
         }
