@@ -7,6 +7,7 @@ import android.content.Intent
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.TaskStackBuilder
+import com.example.deliveryapp.activities.AdminSection
 import com.google.android.gms.maps.model.LatLng
 import java.util.*
 
@@ -18,7 +19,7 @@ object ReminderNotification {
         val shareIntent=PendingIntent.getActivity(context,0, Intent.createChooser(Intent(Intent.ACTION_SEND)
             .setType("text/plain")
             .putExtra(Intent.EXTRA_TEXT,message),"SHARE"),PendingIntent.FLAG_UPDATE_CURRENT)
-        val intent=Intent(Intent(context,AdminSection::class.java))
+        val intent=Intent(Intent(context, AdminSection::class.java))
         //It ensures that once a user launches the pending intent from the notification,a backStack is maintained
         intent.putExtra("EXTRAS","Am Deep Linked")
         val pendingIntent= TaskStackBuilder.create(context).addNextIntentWithParentStack(intent).getPendingIntent(0,

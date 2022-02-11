@@ -7,6 +7,7 @@ import android.content.Context
 import android.os.Build
 import android.util.Log
 import com.example.deliveryapp.utils.ObjectBox
+import com.example.deliveryapp.utils.Settings
 import io.socket.client.IO
 import io.socket.client.Socket
 import java.net.URISyntaxException

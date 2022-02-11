@@ -1,4 +1,4 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.models
 
 data class Success(val message: String) {
 

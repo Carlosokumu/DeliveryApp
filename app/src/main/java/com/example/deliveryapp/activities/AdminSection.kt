@@ -1,19 +1,17 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.afollestad.materialdialogs.DialogAction
 import com.afollestad.materialdialogs.MaterialDialog
+import com.example.deliveryapp.utils.Settings
 import com.example.deliveryapp.adapters.FragmentAdapter
 import com.example.deliveryapp.databinding.ActivityAdminSectionBinding
-import com.example.deliveryapp.databinding.ActivityDashBoardBinding
 import com.example.deliveryapp.fragments.ProfileDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.tingyik90.snackprogressbar.SnackProgressBar
-import com.tingyik90.snackprogressbar.SnackProgressBarManager
 
 class AdminSection : AppCompatActivity(), MaterialDialog.SingleButtonCallback {
 

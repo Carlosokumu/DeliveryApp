@@ -1,5 +1,8 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.network
 
+import com.example.deliveryapp.models.DelivererInfo
+import com.example.deliveryapp.models.Success
+import com.example.deliveryapp.models.OrderInfo
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded

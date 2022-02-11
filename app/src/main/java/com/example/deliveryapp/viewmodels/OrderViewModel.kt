@@ -1,4 +1,4 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.viewmodels
 
 import androidx.lifecycle.ViewModel
 

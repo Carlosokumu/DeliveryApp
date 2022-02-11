@@ -1,25 +1,19 @@
 package com.example.deliveryapp.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.deliveryapp.OnItemListener
+import com.example.deliveryapp.interfaces.OnItemListener
 import com.example.deliveryapp.R
 import com.example.deliveryapp.fragments.PaymentFragment
 import com.example.deliveryapp.models.CakeModel
-import com.example.deliveryapp.models.UserInfo
 import com.example.deliveryapp.utils.Extensions.asOderInfo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 import io.socket.client.IO
 import io.socket.client.Socket
-import io.socket.emitter.Emitter
 import java.net.URISyntaxException
 
 class CakesAdapter(val cakesList: List<CakeModel>): RecyclerView.Adapter<BaseViewHolder>() {

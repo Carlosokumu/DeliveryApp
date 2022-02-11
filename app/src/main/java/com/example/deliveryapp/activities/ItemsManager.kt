@@ -1,8 +1,8 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import com.example.deliveryapp.R
 import com.example.deliveryapp.fragments.CakesFragment
 import com.example.deliveryapp.fragments.DinnerFragment
 import com.example.deliveryapp.fragments.Drinks

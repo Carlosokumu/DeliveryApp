@@ -1,24 +1,18 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.fragments
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.example.deliveryapp.adapters.CakesAdapter
 import com.example.deliveryapp.adapters.DeliverersAdapters
-import com.example.deliveryapp.adapters.OdersAdapter
-import com.example.deliveryapp.databinding.FragmentCakesBinding
-import com.example.deliveryapp.databinding.FragmentClientOrdersBinding
 import com.example.deliveryapp.databinding.FragmentDeliverersListBinding
-import com.sdsmdg.tastytoast.TastyToast
+import com.example.deliveryapp.models.DelivererInfo
+import com.example.deliveryapp.viewmodels.DelivererVm
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 
 class DeliverersList : Fragment() {

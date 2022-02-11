@@ -1,4 +1,4 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.activities
 
 import android.Manifest
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.deliveryapp.R
 import com.shashank.sony.fancywalkthroughlib.FancyWalkthroughActivity
 import com.shashank.sony.fancywalkthroughlib.FancyWalkthroughCard
 
@@ -75,7 +76,7 @@ class WalkThrough: FancyWalkthroughActivity(){
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), MY_LOCATION_REQUEST_CODE)
         }
         else{
-            startActivity(Intent(this,SignIn::class.java))
+            startActivity(Intent(this, SignIn::class.java))
         }
 
     }
@@ -92,7 +93,7 @@ class WalkThrough: FancyWalkthroughActivity(){
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == MY_LOCATION_REQUEST_CODE){
-            startActivity(Intent(this,SignIn::class.java))
+            startActivity(Intent(this, SignIn::class.java))
         }
     }
 

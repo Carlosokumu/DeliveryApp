@@ -6,15 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.deliveryapp.DelivererInfo
-import com.example.deliveryapp.DelivererVm
-import com.example.deliveryapp.OrderInfo
-import com.example.deliveryapp.R
-import com.example.deliveryapp.adapters.CakesAdapter
+import com.example.deliveryapp.viewmodels.DelivererVm
+import com.example.deliveryapp.models.OrderInfo
 import com.example.deliveryapp.adapters.OdersAdapter
-import com.example.deliveryapp.databinding.FragmentCakesBinding
 import com.example.deliveryapp.databinding.FragmentClientOrdersBinding
-import com.example.deliveryapp.utils.ObjectBox
 import com.sdsmdg.tastytoast.TastyToast
 import retrofit2.Call
 import retrofit2.Callback

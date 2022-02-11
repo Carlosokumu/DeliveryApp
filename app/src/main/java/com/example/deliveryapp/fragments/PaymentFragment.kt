@@ -1,6 +1,5 @@
 package com.example.deliveryapp.fragments
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.location.Location
 import android.os.Bundle
@@ -8,13 +7,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.deliveryapp.*
+import com.example.deliveryapp.models.OrderInfo
+import com.example.deliveryapp.models.Success
 import com.example.deliveryapp.models.UserInfo
-import com.example.deliveryapp.utils.ObjectBox
+import com.example.deliveryapp.viewmodels.DelivererVm
 import com.example.mombasa.geofence.LocationResult
 import com.example.mombasa.geofence.MyLocation
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment

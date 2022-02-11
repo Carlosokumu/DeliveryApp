@@ -1,20 +1,15 @@
 package com.example.deliveryapp.adapters
 
 import android.content.Context
-import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.*
 import com.example.deliveryapp.fragments.ClientFragmentInfo
-import com.example.deliveryapp.fragments.PaymentFragment
-import com.example.deliveryapp.models.UserInfo
-import com.example.deliveryapp.utils.Extensions.asOderInfo
-import com.google.firebase.auth.FirebaseAuth
+import com.example.deliveryapp.interfaces.onUserInfo
+import com.example.deliveryapp.models.DelivererInfo
 import com.google.gson.Gson
 
 class DeliverersAdapters(val cakes: List<DelivererInfo>, val context: Context) :

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.deliveryapp.OnItemListener
+import com.example.deliveryapp.interfaces.OnItemListener
 import com.example.deliveryapp.R
 import com.example.deliveryapp.models.CakeModel
 import com.example.deliveryapp.utils.Extensions.asOderInfo

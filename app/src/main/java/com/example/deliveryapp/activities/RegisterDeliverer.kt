@@ -1,14 +1,15 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.activity.viewModels
 import androidx.lifecycle.ViewModelProvider
-import com.example.deliveryapp.databinding.ActivityDashBoardBinding
+import com.example.deliveryapp.utils.Settings
+import com.example.deliveryapp.models.Success
 import com.example.deliveryapp.databinding.ActivityRegisterDelivererBinding
+import com.example.deliveryapp.viewmodels.DelivererVm
 import com.sdsmdg.tastytoast.TastyToast
 import retrofit2.Call
 import retrofit2.Callback
@@ -62,7 +63,7 @@ class RegisterDeliverer : AppCompatActivity(), View.OnClickListener {
                         Settings.loggedAsDeliverer(true)
                         Settings.loggedasCustomer(false)
                         Settings.loggedAsAdmin(false)
-                        startActivity(Intent(this@RegisterDeliverer,DelivererActivity::class.java))
+                        startActivity(Intent(this@RegisterDeliverer, DelivererActivity::class.java))
                     }
                     else{
                         TastyToast.makeText(

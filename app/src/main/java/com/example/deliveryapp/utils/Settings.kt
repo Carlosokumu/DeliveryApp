@@ -1,4 +1,4 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.utils
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -18,7 +18,7 @@ object Settings {
          */
         fun init(context: Context){
             defaultPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-            dataPreferences=context.getSharedPreferences(SHARED_PREFERENCE_NAME,0)
+            dataPreferences =context.getSharedPreferences(SHARED_PREFERENCE_NAME,0)
         }
 
 

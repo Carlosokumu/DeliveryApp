@@ -5,13 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.deliveryapp.OnItemListener
-import com.example.deliveryapp.OrderInfo
+import com.example.deliveryapp.interfaces.OnItemListener
+import com.example.deliveryapp.models.OrderInfo
 import com.example.deliveryapp.R
-import com.example.deliveryapp.adapters.Cake
 import com.example.deliveryapp.adapters.CakesAdapter
 import com.example.deliveryapp.databinding.FragmentCakesBinding
 import com.example.deliveryapp.models.CakeModel

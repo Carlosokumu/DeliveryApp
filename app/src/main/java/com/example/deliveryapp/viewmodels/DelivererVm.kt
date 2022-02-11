@@ -1,10 +1,9 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.viewmodels
 
 import androidx.lifecycle.ViewModel
+import com.example.deliveryapp.network.ApiService
+import com.example.deliveryapp.utils.Constants
 import com.google.gson.GsonBuilder
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

@@ -1,4 +1,4 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.models
 
 import io.objectbox.annotation.Entity
 import io.objectbox.annotation.Id

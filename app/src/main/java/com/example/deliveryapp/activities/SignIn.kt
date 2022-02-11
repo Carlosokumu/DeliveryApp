@@ -1,4 +1,4 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import com.afollestad.materialdialogs.DialogAction
 import com.afollestad.materialdialogs.MaterialDialog
+import com.example.deliveryapp.fragments.HelpDialog
+import com.example.deliveryapp.utils.Settings
 import com.example.deliveryapp.databinding.ActivitySignInBinding
 import com.example.deliveryapp.utils.Extensions.hideBar
 import com.google.firebase.auth.FirebaseAuth
@@ -22,12 +24,12 @@ class SignIn : AppCompatActivity(), MaterialDialog.SingleButtonCallback {
          hideBar()
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        profileDialog = HelpDialog.newInstance(this,"LogAsAdmin")
+        profileDialog = HelpDialog.newInstance(this, "LogAsAdmin")
         mAuth = FirebaseAuth.getInstance()
 
         binding.ivLoginBack.setOnClickListener { onBackPressed() }
         binding.tvRegister.setOnClickListener {
-            val intent = Intent(this,SignUpActivity::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
 
@@ -63,7 +65,7 @@ class SignIn : AppCompatActivity(), MaterialDialog.SingleButtonCallback {
                         val intent = Intent(this, DashBoard::class.java)
                         startActivity(intent)
                         this.finish()
-                        Settings.loggedasCustomer(true)
+                    Settings.loggedasCustomer(true)
 
                     } else {
                         TastyToast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT,TastyToast.ERROR).show()

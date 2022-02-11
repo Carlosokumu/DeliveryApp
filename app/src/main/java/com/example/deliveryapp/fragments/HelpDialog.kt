@@ -1,4 +1,4 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.fragments
 
 import android.app.Dialog
 import android.os.Bundle
@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
 import com.afollestad.materialdialogs.MaterialDialog
-import com.example.deliveryapp.fragments.ProfileDialog
-import com.google.firebase.auth.FirebaseAuth
-import kotlin.properties.Delegates
+import com.example.deliveryapp.R
 
 class HelpDialog: DialogFragment() {
 
@@ -21,7 +19,7 @@ class HelpDialog: DialogFragment() {
 
         fun newInstance(buttonCallback: MaterialDialog.SingleButtonCallback,whichHelp: String): HelpDialog {
             callback = buttonCallback
-            this.whichHelp = whichHelp
+            Companion.whichHelp = whichHelp
             return  HelpDialog()
         }
     }

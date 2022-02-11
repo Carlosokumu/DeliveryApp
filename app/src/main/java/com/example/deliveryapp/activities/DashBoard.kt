@@ -1,4 +1,4 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.activities
 
 import android.Manifest
 import android.content.Intent
@@ -7,27 +7,25 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.core.util.ObjectsCompat
 import com.afollestad.materialdialogs.DialogAction
 import com.afollestad.materialdialogs.MaterialDialog
+import com.example.deliveryapp.*
 import com.example.deliveryapp.databinding.ActivityDashBoardBinding
 import com.example.deliveryapp.fragments.ProfileDialog
+import com.example.deliveryapp.models.NotificationData
 import com.example.deliveryapp.models.UserInfo
 import com.example.deliveryapp.utils.ObjectBox
+import com.example.deliveryapp.utils.Settings
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 import com.sdsmdg.tastytoast.TastyToast
 import com.tingyik90.snackprogressbar.SnackProgressBar
 import com.tingyik90.snackprogressbar.SnackProgressBarManager
-import io.socket.client.IO
 import io.socket.client.Socket
 import io.socket.emitter.Emitter
-import java.net.URISyntaxException
 
 
 class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.SingleButtonCallback {

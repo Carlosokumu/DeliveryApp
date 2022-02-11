@@ -3,12 +3,11 @@ package com.example.deliveryapp.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.fragment.app.FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
-import com.example.deliveryapp.DeliverersList
+import com.example.deliveryapp.fragments.DeliverersList
 import com.example.deliveryapp.fragments.ClientOrders
 
 class FragmentAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
-    private val fragmentss = listOf(ClientOrders(),DeliverersList())
+    private val fragmentss = listOf(ClientOrders(), DeliverersList())
     private val titles = listOf("Client Orders", "Deliverers")
     override fun getCount(): Int = fragmentss.size
 

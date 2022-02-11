@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.afollestad.materialdialogs.MaterialDialog
 import com.example.deliveryapp.R
-import com.example.deliveryapp.Settings
+import com.example.deliveryapp.utils.Settings
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 

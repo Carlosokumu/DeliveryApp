@@ -1,21 +1,15 @@
 package com.example.deliveryapp.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
-import androidx.lifecycle.ViewModelProvider
-import com.example.deliveryapp.DelivererVm
 import com.example.deliveryapp.R
-import com.example.deliveryapp.models.UserInfo
-import com.example.deliveryapp.onUserInfo
+import com.example.deliveryapp.interfaces.onUserInfo
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.sdsmdg.tastytoast.TastyToast
-import io.socket.emitter.Emitter
 
 class ClientFragmentInfo: BottomSheetDialogFragment() {
 
@@ -29,7 +23,7 @@ class ClientFragmentInfo: BottomSheetDialogFragment() {
  companion object {
      private lateinit var clientinfo: onUserInfo
      private  lateinit var phoneNumber: String
-     fun newInstance(info:  onUserInfo,phone: String): ClientFragmentInfo {
+     fun newInstance(info: onUserInfo, phone: String): ClientFragmentInfo {
          this.clientinfo = info
          this.phoneNumber = phone
          return  ClientFragmentInfo()

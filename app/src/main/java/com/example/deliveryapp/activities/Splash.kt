@@ -1,14 +1,12 @@
-package com.example.deliveryapp
+package com.example.deliveryapp.activities
 
-import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.deliveryapp.R
+import com.example.deliveryapp.utils.Settings
 import com.google.firebase.auth.FirebaseAuth
 import com.sdsmdg.tastytoast.TastyToast
 

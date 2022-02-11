@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.deliveryapp.ClientInfo
-import com.example.deliveryapp.MapsActivity
+import com.example.deliveryapp.models.ClientInfo
+import com.example.deliveryapp.activities.MapsActivity
 import com.example.deliveryapp.R
 
-class  WorkAdapter(val clientInfo: List<ClientInfo>,val context: Context): RecyclerView.Adapter<BaseViewHolder>() {
+class  WorkAdapter(val clientInfo: List<ClientInfo>, val context: Context): RecyclerView.Adapter<BaseViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {

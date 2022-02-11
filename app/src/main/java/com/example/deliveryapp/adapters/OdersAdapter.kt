@@ -7,19 +7,16 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.DeliveryApp
-import com.example.deliveryapp.NotificationData
-import com.example.deliveryapp.OrderInfo
+import com.example.deliveryapp.models.NotificationData
+import com.example.deliveryapp.models.OrderInfo
 import com.example.deliveryapp.R
-import com.example.deliveryapp.fragments.PaymentFragment
 import com.example.deliveryapp.models.UserInfo
 import com.example.deliveryapp.utils.ObjectBox
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.gson.Gson
-import io.socket.client.IO
 import io.socket.client.Socket
 import io.socket.emitter.Emitter
-import java.net.URISyntaxException
 
 class OdersAdapter(val order: List<OrderInfo>, val context: Context) :
     RecyclerView.Adapter<BaseViewHolder>() {

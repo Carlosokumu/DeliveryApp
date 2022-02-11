@@ -1,26 +1,21 @@
 package com.example.deliveryapp.utils
 
 import android.app.Activity
-import android.app.Application
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Build
-import android.telephony.SmsManager
-import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import com.example.deliveryapp.OrderInfo
+import com.example.deliveryapp.models.OrderInfo
 import com.example.deliveryapp.R
 import com.example.deliveryapp.Reminder
-import com.example.deliveryapp.geofence.GeofenceTransitionsIntentService
 import com.example.deliveryapp.models.CakeModel
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.*
