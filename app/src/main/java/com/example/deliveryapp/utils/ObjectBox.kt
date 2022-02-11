@@ -1,7 +1,7 @@
 package com.example.deliveryapp.utils
 
 import android.content.Context
-import com.example.deliveryapp.MyObjectBox
+import com.example.deliveryapp.models.MyObjectBox
 import io.objectbox.BoxStore
 
 

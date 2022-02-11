@@ -25,44 +25,44 @@ class Splash : AppCompatActivity() {
 
         Handler().postDelayed({ //This method will be executed once the timer is over
             // Start your app main activity
-            if (mAuth.currentUser != null) {
-                if (Settings.isAdmin()!!) {
-                    val i = Intent(this@Splash, AdminSection::class.java)
-                    TastyToast.makeText(
-                        this,
-                        "Logged as Admin",
-                        TastyToast.LENGTH_SHORT,
-                        TastyToast.INFO
-                    ).show()
-                    startActivity(i)
-                    finish()
-                } else if (Settings.isCustomer()!!) {
-                    val i = Intent(this@Splash, DashBoard::class.java)
-                    TastyToast.makeText(
-                        this,
-                        "Logged as Customer",
-                        TastyToast.LENGTH_SHORT,
-                        TastyToast.INFO
-                    ).show()
-                    Toast.makeText(this, "r", Toast.LENGTH_SHORT).show()
-                    startActivity(i)
-                    finish()
-                } else if (Settings.isDeliverer()!!) {
-                    val i = Intent(this@Splash, DelivererActivity::class.java)
-                    TastyToast.makeText(
-                        this,
-                        "Logged as a Deliverer",
-                        TastyToast.LENGTH_SHORT,
-                        TastyToast.INFO
-                    ).show()
-                    startActivity(i)
-                    finish()
-                }
-            } else {
-                val i = Intent(this@Splash, WalkThrough::class.java)
-                startActivity(i)
-                finish()
-            }
+//            if (mAuth.currentUser != null) {
+//                if (Settings.isAdmin()!!) {
+//                    val i = Intent(this@Splash, AdminSection::class.java)
+//                    TastyToast.makeText(
+//                        this,
+//                        "Logged as Admin",
+//                        TastyToast.LENGTH_SHORT,
+//                        TastyToast.INFO
+//                    ).show()
+//                    startActivity(i)
+//                    finish()
+//                } else if (Settings.isCustomer()!!) {
+//                    val i = Intent(this@Splash, DashBoard::class.java)
+//                    TastyToast.makeText(
+//                        this,
+//                        "Logged as Customer",
+//                        TastyToast.LENGTH_SHORT,
+//                        TastyToast.INFO
+//                    ).show()
+//                    Toast.makeText(this, "r", Toast.LENGTH_SHORT).show()
+//                    startActivity(i)
+//                    finish()
+//                } else if (Settings.isDeliverer()!!) {
+//                    val i = Intent(this@Splash, DelivererActivity::class.java)
+//                    TastyToast.makeText(
+//                        this,
+//                        "Logged as a Deliverer",
+//                        TastyToast.LENGTH_SHORT,
+//                        TastyToast.INFO
+//                    ).show()
+//                    startActivity(i)
+//                    finish()
+//                }
+//            } else {
+//                val i = Intent(this@Splash, WalkThrough::class.java)
+//                startActivity(i)
+//                finish()
+//            }
 
 
             //s.isCustomer()!!){
@@ -80,7 +80,7 @@ class Splash : AppCompatActivity() {
 //                    finish()
 //                }
 
-
+            startActivity(Intent(this@Splash,DashBoard::class.java))
         }, 5000)
     }
 }

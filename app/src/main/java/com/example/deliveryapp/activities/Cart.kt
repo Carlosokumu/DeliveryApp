@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.deliveryapp.R
 
-class OderList : AppCompatActivity() {
+class Cart : AppCompatActivity() {
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_oder_list)
+        setContentView(R.layout.activity_main)
     }
 }

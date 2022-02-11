@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="wrap_content"
+    android:background="@color/whiteuniv"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/topMan"
+        android:orientation="horizontal"
+        android:layout_height="100dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="5dp"
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/roundedImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ndrink"
+                android:background="@color/white"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_normal"
+                android:text="Toyo Eatery"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_small"
+                android:drawableEnd="@drawable/ic_favno"
+                android:drawablePadding="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_normal"
+                android:text="12.3"
+                android:fontFamily="sans-serif-thin"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:alpha="0.5"
+                android:layout_marginTop="@dimen/margin_small"
+                android:drawablePadding="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/margin_normal"
+                android:text="250ksh"
+                android:fontFamily="@font/segoe_ui_regular"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/line"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_gravity="center"
+        android:layout_below="@+id/topMan"
+        android:alpha="0.2"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/scrollbar" />
+
+</RelativeLayout>

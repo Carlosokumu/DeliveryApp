@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.util.ObjectsCompat
@@ -18,6 +19,7 @@ import com.example.deliveryapp.models.NotificationData
 import com.example.deliveryapp.models.UserInfo
 import com.example.deliveryapp.utils.ObjectBox
 import com.example.deliveryapp.utils.Settings
+import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
@@ -28,7 +30,8 @@ import io.socket.client.Socket
 import io.socket.emitter.Emitter
 
 
-class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.SingleButtonCallback {
+class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.SingleButtonCallback,
+    NavigationBarView.OnItemSelectedListener {
 
     private lateinit var profileDialog: ProfileDialog
     lateinit var mSocket: Socket
@@ -48,10 +51,10 @@ class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.Sing
 
 
 
-        val data =  UserInfo(name = "",what = "",userId = FirebaseAuth.getInstance().currentUser?.email!!)
-        val jsonData = gson.toJson(data)
+      //  val data =  UserInfo(name = "",what = "",userId = FirebaseAuth.getInstance().currentUser?.email!!)
+      //  val jsonData = gson.toJson(data)
 
-        (applicationContext as DeliveryApp).getSocket().emit("onOrder", jsonData)
+      //  (applicationContext as DeliveryApp).getSocket().emit("onOrder", jsonData)
 
         val onOrder = Emitter.Listener {
 
@@ -92,7 +95,8 @@ class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.Sing
         binding.drinks.setOnClickListener(this)
         binding.profileSection.setOnClickListener(this)
         binding.deliverer.setOnClickListener(this)
-        binding.notifications.setOnClickListener(this)
+        //binding.notifications.setOnClickListener(this)
+        binding.bottomnav.setOnItemSelectedListener(this)
         //binding.location.setOnClickListener(this)
         snackProgressBarManager = SnackProgressBarManager(binding.parent)
             .setProgressBarColor(R.color.colorAccent)
@@ -122,10 +126,10 @@ class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.Sing
                 val intent = Intent(this, RegisterDeliverer::class.java)
                 startActivity(intent)
             }
-            binding.notifications -> {
-                val intent = Intent(this, NotificationActivity::class.java)
-                startActivity(intent)
-            }
+//            binding.notifications -> {
+//                val intent = Intent(this, NotificationActivity::class.java)
+//                startActivity(intent)
+//            }
 //            binding.location -> {
 //                val intent = Intent(this, MapsActivity::class.java)
 //                startActivity(intent)
@@ -156,6 +160,20 @@ class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.Sing
         this.finish()
     }
 
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.home ->{
+                startActivity(Intent(this, SignIn::class.java))
+            }
+            R.id.cart ->{
+                startActivity(Intent(this, Cart::class.java))
+            }
+            R.id.fav ->{
+                startActivity(Intent(this, Favorites::class.java))
+            }
+        }
+        return  true
+    }
 
 
 }

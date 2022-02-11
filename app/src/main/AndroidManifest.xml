@@ -55,7 +55,7 @@
             android:name=".activities.MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".activities.NotificationActivity" />
-        <activity android:name=".activities.OderList" />
+        <activity android:name=".activities.Favorites" />
         <activity android:name=".activities.AdminSection" />
         <activity android:name=".activities.RegisterDeliverer" />
         <activity android:name=".activities.ItemsManager" />
@@ -72,7 +72,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.Cart" />
     </application>
 
 </manifest>
