@@ -1,7 +1,11 @@
 package com.example.deliveryapp
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.shashank.sony.fancywalkthroughlib.FancyWalkthroughActivity
 import com.shashank.sony.fancywalkthroughlib.FancyWalkthroughCard
 
@@ -12,12 +16,12 @@ class WalkThrough: FancyWalkthroughActivity(){
         super.onCreate(savedInstanceState)
 
         val fancywalkthroughCard1 = FancyWalkthroughCard(
-            "Find Restaurant",
-            "Find the best restaurant in your neighborhood.",
+            "Welcome",
+            "Welcome to our Restaurant.We make you feel at home!",
         )
         val fancywalkthroughCard2 = FancyWalkthroughCard(
             "Pick the best",
-            "Pick the right place using trusted ratings and reviews.",
+            "Pick  what's  right for you  based on our Samples.",
         )
         val fancywalkthroughCard3 = FancyWalkthroughCard(
             "Choose your meal",
@@ -66,7 +70,30 @@ class WalkThrough: FancyWalkthroughActivity(){
 
 
     override fun onFinishButtonPressed() {
-         startActivity(Intent(this,SignIn::class.java))
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), MY_LOCATION_REQUEST_CODE)
+        }
+        else{
+            startActivity(Intent(this,SignIn::class.java))
+        }
+
+    }
+
+
+    companion object {
+        const val  MY_LOCATION_REQUEST_CODE=2122
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == MY_LOCATION_REQUEST_CODE){
+            startActivity(Intent(this,SignIn::class.java))
+        }
     }
 
 }

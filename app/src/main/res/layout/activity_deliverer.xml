@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whiteuniv"
+        android:paddingTop="24dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/AppTheme.Toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/location"
+                        android:layout_width="40dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/colorBlack"
+                        android:layout_height="40dp"
+                        android:pointerIcon="arrow"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/rider" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="64dp"
+                        android:fontFamily="@font/seg_ui_semibold"
+                        android:text="Hello Rider"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileSection"
+                        roundedCornerRadius="10dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:clickable="true"
+                        android:src="@drawable/ic_account"
+                        app:civ_border_color="@color/black"
+                        app:civ_border_width="2dp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+ <LinearLayout
+     android:layout_width="wrap_content"
+     android:layout_centerInParent="true"
+     android:id="@+id/checkNo"
+     android:visibility="gone"
+     android:orientation="vertical"
+     android:layout_height="wrap_content">
+     <ImageView
+         android:layout_width="wrap_content"
+         android:src="@drawable/rider"
+         android:layout_gravity="center"
+         android:layout_height="200dp"/>
+     <TextView
+         android:layout_width="wrap_content"
+         android:gravity="center_vertical"
+         android:id="@+id/checkOut"
+         android:layout_gravity="center_horizontal"
+         android:textColor="@color/colorBlack"
+         android:text="You have no deliveries to Make"
+         android:layout_below="@+id/imageRider"
+         android:layout_height="wrap_content"/>
+
+ </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerWorks"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        android:overScrollMode="never"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:itemCount="6"
+        tools:listitem="@layout/deliverieslist"
+        tools:spanCount="2"/>
+
+
+
+
+
+</RelativeLayout>

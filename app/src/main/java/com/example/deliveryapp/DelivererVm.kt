@@ -31,4 +31,10 @@ class DelivererVm(): ViewModel() {
     fun getDelivers() = apiService.getDeliverers()
 
 
+
+    fun getOrders() = apiService.getOrders()
+
+    fun placeOder(name: String,orderBy: String,price: String,longitude: String,latitude: String) = apiService.placeOrder(name = name,orderedBy = orderBy,price = price,longitude = longitude,latitude = latitude)
+
+
 }

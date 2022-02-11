@@ -21,6 +21,22 @@ interface ApiService {
         @Field("secondName") email: String,
         @Field("phoneNumber") phoneNumber: String
     ): Call<Success>
+
+
+    @FormUrlEncoded
+    @POST("/orders/orders")
+    fun placeOrder(
+        @Field("name") name: String,
+        @Field("orderedBy") orderedBy: String,
+        @Field("price")   price: String,
+        @Field("longitude") latitude: String,
+        @Field("latitude") longitude: String
+    ): Call<Success>
+
+
+
+   @GET("/orders")
+    fun getOrders(): Call<List<OrderInfo>>
 }
 
 

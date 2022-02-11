@@ -36,14 +36,13 @@ class DinnerFragment : Fragment() {
 
     private fun getDinner(): List<CakeModel>{
         val cakes = mutableListOf<CakeModel>()
-        cakes.add(CakeModel("Sushi","450",R.drawable.cake))
-        cakes.add(CakeModel("Cavier","450",R.drawable.cake))
-        cakes.add(CakeModel("French Fries","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("Sushi","300",R.drawable.mealthree))
+        cakes.add(CakeModel("Cavier","750",R.drawable.mealtwo))
+        cakes.add(CakeModel("French Fries","400",R.drawable.pancakes))
+        cakes.add(CakeModel("Chicken Fries","510",R.drawable.chicken))
+        cakes.add(CakeModel("Mexican Greens","950",R.drawable.mexican))
+        //cakes.add(CakeModel("Italian Pastas","900",R.drawable.mealone))
+
         return cakes
     }
 

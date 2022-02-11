@@ -40,14 +40,14 @@ class CakesFragment() : Fragment(), OnItemListener {
 
     private fun getCakes(): List<CakeModel> {
         val cakes = mutableListOf<CakeModel>()
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("WhiteForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
-        cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+        cakes.add(CakeModel("Peggies","1450",R.drawable.peggy))
+        cakes.add(CakeModel("Chocholate Sweet Cake","800",R.drawable.cakered))
+        cakes.add(CakeModel("Pink Muffins","450",R.drawable.cakered))
+        cakes.add(CakeModel("Queen Cakes","1000",R.drawable.pancakes))
+       // cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+      //  cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+      //  cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
+       // cakes.add(CakeModel("BlackForest","450",R.drawable.cake))
         return cakes
     }
 

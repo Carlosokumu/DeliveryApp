@@ -5,28 +5,40 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Toast
+import com.afollestad.materialdialogs.DialogAction
+import com.afollestad.materialdialogs.MaterialDialog
 import com.example.deliveryapp.databinding.ActivitySignUpBinding
+import com.example.deliveryapp.fragments.ProfileDialog
+import com.example.deliveryapp.utils.Extensions.hideBar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class SignUpActivity : AppCompatActivity() {
+class SignUpActivity : AppCompatActivity(), MaterialDialog.SingleButtonCallback {
 
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var mAuth: FirebaseAuth
     private lateinit var databaseReference: DatabaseReference
+    private lateinit var profileDialog: HelpDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        hideBar()
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        profileDialog = HelpDialog.newInstance(this,"SignUpAsAdmin")
         mAuth = FirebaseAuth.getInstance()
         binding.ivRegBack.setOnClickListener { onBackPressed() }
         binding.tvLogin.setOnClickListener {
             val intent = Intent(this,SignIn::class.java)
             startActivity(intent)
+        }
+
+        binding.needHelp.setOnClickListener{
+            profileDialog.show(supportFragmentManager,"help")
+        }
+        binding.tvLoginAsAdmin.setOnClickListener{
+            startActivity(Intent(this,SignupAdmin::class.java))
         }
         binding.btnRegister.setOnClickListener {
             registerUser()
@@ -65,6 +77,7 @@ class SignUpActivity : AppCompatActivity() {
             Toast.makeText(this, "Passwords Do not Match", Toast.LENGTH_SHORT).show()
         } else {
             //register with email and pwd
+                binding.btnRegister.setText("Registering..")
             mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 //progress bar
 //                val dialog = ProgressDialog(this)
@@ -76,7 +89,7 @@ class SignUpActivity : AppCompatActivity() {
                     databaseReference = FirebaseDatabase.getInstance().reference
                     // val user = Users(firstName, lastName, email, phone, password)
                     //databaseReference.child(phone).setValue(user).addOnSuccessListener {
-
+                    Settings.loggedasCustomer(true)
                     val userMap = HashMap<String, Any>()
                     userMap["userID"] = uid
                     userMap["firstName"] = firstName
@@ -95,8 +108,10 @@ class SignUpActivity : AppCompatActivity() {
                             ).show()
                             //dismiss dialog
                         }
+                    this.finish()
 
                 } else {
+                    binding.btnRegister.text = "Sign Up"
                     Toast.makeText(
                         this, "Error",
                         Toast.LENGTH_SHORT
@@ -106,5 +121,9 @@ class SignUpActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onClick(dialog: MaterialDialog, which: DialogAction) {
+        dialog.dismiss()
     }
 }

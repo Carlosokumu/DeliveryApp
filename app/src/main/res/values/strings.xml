@@ -2,4 +2,78 @@
     <string name="app_name">DeliveryApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">1243</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <!-- Remainder  texts -->
+    <string name="marker_content_description">Marker</string>
+    <string name="instruction_where_subtitle_description">Drag the map to set the location</string>
+    <string name="instruction_radius_description">Choose the radius</string>
+    <string name="instruction_message_description">Enter the message</string>
+    <string name="continue_description">Continue</string>
+    <string name="error_required">Required</string>
+    <string name="message_hint">We arrived! :]</string>
+    <string name="radius_description">%1$s meters</string>
+    <string name="reminder_removal_alert">Remove reminder?</string>
+    <string name="reminder_removal_alert_positive">OK</string>
+    <string name="reminder_removal_alert_negative">Cancel</string>
+    <string name="reminder_added_success">Reminder added!</string>
+    <string name="reminder_removed_success">Reminder removed!</string>
+    <string name="instruction_where_description">Where do you want to be reminded?</string>
+
+
+    <!-- error codes -->
+    <string name="geofence_unknown_error">
+        Unknown error: the Geofence service is not available now.
+      </string>
+    <string name="geofence_not_available">
+         Geofence service is not available now. Go to Settings>Location>Mode and choose High accuracy.
+       </string>
+    <string name="geofence_too_many_geofences">
+           Your app has registered too many geofences.
+      </string>
+    <string name="geofence_too_many_pending_intents">
+          You have provided too many PendingIntents to the addGeofences() call.
+    </string>
+    <string name="text_sign_in_advantages">
+        When signed in:
+        \n\n&#8226; All  your data  is saved.
+        \n\n&#8226; App preferences will be persisted across app installs.
+
+         When signing out:
+        \n\n&#8226; All your data is removed and you have to begin the authentication process again
+
+    </string>
+    <string name="helpLogAsdmin">
+
+        Logging in As an Admin means that  you  initially signed Up as an Admin
+
+    </string>
+    <string name="helpsignUpAsAdmin">
+
+        When you Sign in as an Admin,You will be responsible for handling orders from Customers.
+        You will also be responsible for make sure deliveries are done.By Default you will be signed in as a
+        a customer
+
+    </string>
+    <string name="currentSignIn">
+
+        You are Currently Signed in as an admin
+
+         Some things to Note,When signed in:
+        \n\n&#8226; All  your data  is saved.
+        \n\n&#8226; App preferences will be persisted across app installs.
+
+         When signing out:
+        \n\n&#8226; All your data is removed and you have to begin the authentication process again
+
+    </string>
+    <string name="signedUser">
+
+        You are Currently Signed in as  a Rider
+
+
+
+    </string>
 </resources>

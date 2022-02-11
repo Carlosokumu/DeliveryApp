@@ -36,7 +36,7 @@ class CakeAdapter(val cakesList: ArrayList<CakeModel>) : RecyclerView.Adapter<Ca
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.items_layout,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.row_items,parent,false)
         return ViewHolder(view)
     }
 

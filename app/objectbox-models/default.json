@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:3823772678121967513",
-      "lastPropertyId": "4:7026228777459325842",
+      "lastPropertyId": "6:1521864725036833552",
       "name": "OrderInfo",
       "properties": [
         {
@@ -28,12 +28,80 @@
           "id": "4:7026228777459325842",
           "name": "price",
           "type": 9
+        },
+        {
+          "id": "5:1155287655801088264",
+          "name": "latitude",
+          "type": 9
+        },
+        {
+          "id": "6:1521864725036833552",
+          "name": "longitude",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:9163689656129610730",
+      "lastPropertyId": "4:8523551602784741208",
+      "name": "NotificationData",
+      "properties": [
+        {
+          "id": "1:778073915101174382",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "3:8078775528554622151",
+          "name": "message",
+          "type": 9
+        },
+        {
+          "id": "4:8523551602784741208",
+          "name": "whatOrdered",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:7844862698516090491",
+      "lastPropertyId": "5:8195850674199775607",
+      "name": "ClientInfo",
+      "properties": [
+        {
+          "id": "1:2481298274171360989",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5684325805499971740",
+          "name": "longitude",
+          "type": 9
+        },
+        {
+          "id": "3:6950478700979540370",
+          "name": "latitude",
+          "type": 9
+        },
+        {
+          "id": "4:6462783469682357278",
+          "name": "clientName",
+          "type": 9
+        },
+        {
+          "id": "5:8195850674199775607",
+          "name": "phoneNumber",
+          "type": 9
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "1:3823772678121967513",
+  "lastEntityId": "3:7844862698516090491",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
@@ -41,7 +109,9 @@
   "modelVersionParserMinimum": 5,
   "retiredEntityUids": [],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    1098714636608450513
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

@@ -59,7 +59,10 @@ class RegisterDeliverer : AppCompatActivity(), View.OnClickListener {
                             TastyToast.LENGTH_SHORT,
                             TastyToast.SUCCESS
                         ).show()
-                        startActivity(Intent(this@RegisterDeliverer,DashBoard::class.java))
+                        Settings.loggedAsDeliverer(true)
+                        Settings.loggedasCustomer(false)
+                        Settings.loggedAsAdmin(false)
+                        startActivity(Intent(this@RegisterDeliverer,DelivererActivity::class.java))
                     }
                     else{
                         TastyToast.makeText(

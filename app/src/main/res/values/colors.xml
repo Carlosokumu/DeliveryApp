@@ -24,4 +24,6 @@
     <color name="border">#4041434e</color>
     <color name="background800">#424242</color>
     <color name="white_12">#fafafa</color>
+    <color name="link">#0a80d1</color>
+    <color name="colorGradientStartlist">#002156</color>
 </resources>

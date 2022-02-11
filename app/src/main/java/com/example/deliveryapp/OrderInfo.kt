@@ -12,6 +12,8 @@ data class OrderInfo(
     var name: String,
     var orderedBy: String,
     var price: String,
+     var latitude: String?,
+     var longitude: String?,
 
 
 ) {

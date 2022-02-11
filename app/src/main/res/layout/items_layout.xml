@@ -23,7 +23,7 @@
                 android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:src="@drawable/cake" />
+                android:src="@drawable/spoke" />
             <TextView
                 android:id="@+id/tvFoodName"
                 android:layout_width="wrap_content"

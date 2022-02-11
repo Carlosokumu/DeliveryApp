@@ -17,7 +17,26 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileSection"
+                    android:layout_width="40dp"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="@color/colorBlack"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/margin_normal"
+                    android:pointerIcon="arrow"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_account" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
@@ -27,7 +46,9 @@
             app:tabGravity="fill"
             app:tabIndicatorColor="#8A2BE2"
             app:tabIndicatorHeight="3dp"
-            app:tabMode="fixed" />
+            app:tabMode="fixed" >
+
+        </com.google.android.material.tabs.TabLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

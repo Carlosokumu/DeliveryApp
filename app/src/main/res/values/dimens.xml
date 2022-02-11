@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="card_view_padding">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_average">12dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="item_offset">4dp</dimen>
+    <dimen name="padding_empty_bottom">16dp</dimen>
     <!-- margins -->
     <dimen name="margin_normal">16dp</dimen>
     <dimen name="margin_medium">12dp</dimen>
     <dimen name="margin_none">0dp</dimen>
-    <dimen name="margin_small">8dp</dimen>
+    <!--    elevation-->
+    <dimen name="default_elevation">1dp</dimen>
+    <dimen name="bottom_sheet_elevation">12dp</dimen>
+    <dimen name="divider_height">1px</dimen>
+    <!--    corner radius-->
+    <dimen name="corner_radius_large">8dp</dimen>
+    <dimen name="corner_radius_medium">6dp</dimen>
+    <dimen name="corner_radius_small">4dp</dimen>
 </resources>

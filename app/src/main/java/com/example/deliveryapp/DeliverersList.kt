@@ -43,7 +43,7 @@ class DeliverersList : Fragment() {
                          _binding?.empty?.visibility= View.VISIBLE
                      }
                      else{
-                              val adapter = DeliverersAdapters(response.body()!!)
+                              val adapter = DeliverersAdapters(response.body()!!,requireContext())
                               _binding?.no?.visibility= View.GONE
                               _binding?.recyclerOrders?.adapter =  adapter
 

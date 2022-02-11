@@ -64,8 +64,8 @@
             android:layout_width="wrap_content"
             android:textColor="@color/black"
             android:layout_marginLeft="@dimen/margin_normal"
-            android:text="Available"
-            android:id="@+id/availability"
+            android:text="Assign Delivery"
+            android:id="@+id/txtAssign"
             android:layout_height="wrap_content">
 
         </TextView>

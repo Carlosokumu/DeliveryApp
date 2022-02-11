@@ -1,0 +1,33 @@
+package com.example.mombasa.fragments
+
+import AddRemainder
+import android.Manifest
+import android.app.AlertDialog
+import android.content.Context
+import android.content.Context.LOCATION_SERVICE
+import android.content.pm.PackageManager
+import android.location.LocationManager
+import android.os.Bundle
+import android.provider.Settings.Global.getString
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.setFragmentResultListener
+import com.example.deliveryapp.DeliveryApp
+import com.example.deliveryapp.R
+import com.example.deliveryapp.RemainderRepo
+import com.example.deliveryapp.Reminder
+import com.example.deliveryapp.databinding.FragmentRemainderBinding
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.material.snackbar.Snackbar
+import com.sdsmdg.tastytoast.TastyToast
+
