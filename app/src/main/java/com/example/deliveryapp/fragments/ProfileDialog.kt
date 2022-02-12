@@ -21,8 +21,8 @@ class ProfileDialog: DialogFragment() {
     companion object {
         private lateinit  var callback: MaterialDialog.SingleButtonCallback
 
-        fun newInstance(buttonCallback: MaterialDialog.SingleButtonCallback): ProfileDialog {
-            callback = buttonCallback
+        fun newInstance(callback: MaterialDialog.SingleButtonCallback): ProfileDialog {
+            this.callback = callback
             return ProfileDialog()
         }
     }

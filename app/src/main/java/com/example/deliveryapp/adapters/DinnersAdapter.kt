@@ -45,7 +45,8 @@ class DinnersAdapter(val cakes: List<CakeModel>,val context: Context): RecyclerV
                     name = cakes[position].name,
                     price = cakes[position].price,
                     image = cakes[position].image,
-                    description = holder.itemView.context.getString(R.string.sample)
+                    description = holder.itemView.context.getString(R.string.sample),
+                    context = context
                 )
             ).addToBackStack("").commit()
         }

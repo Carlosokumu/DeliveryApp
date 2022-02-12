@@ -9,6 +9,8 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.util.ObjectsCompat
 import com.afollestad.materialdialogs.DialogAction
 import com.afollestad.materialdialogs.MaterialDialog
@@ -103,6 +105,14 @@ class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.Sing
             .setOverlayLayoutAlpha(0.6f);
 
 
+
+        if (ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                WalkThrough.MY_LOCATION_REQUEST_CODE
+            )
+        }
+
+
     }
 
     override fun onClick(view: View) {
@@ -173,6 +183,18 @@ class DashBoard : AppCompatActivity(), View.OnClickListener, MaterialDialog.Sing
             }
         }
         return  true
+    }
+
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == WalkThrough.MY_LOCATION_REQUEST_CODE){
+
+        }
     }
 
 

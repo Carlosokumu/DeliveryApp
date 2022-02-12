@@ -7,14 +7,14 @@ import io.objectbox.annotation.Id
 data class OrderInfo(
 
 
-     @Id
-     var id: Long = 0,
+    @Id
+    var id: Long = 0,
     var name: String,
     var orderedBy: String,
     var price: String,
-     var latitude: String?,
-     var longitude: String?,
+    var latitude: String?,
+    var longitude: String?,
 
 
-) {
+    ) {
 }
