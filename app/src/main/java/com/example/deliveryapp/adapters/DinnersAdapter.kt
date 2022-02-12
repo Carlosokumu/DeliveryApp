@@ -41,7 +41,12 @@ class DinnersAdapter(val cakes: List<CakeModel>,val context: Context): RecyclerV
 
         holder.itemView.setOnClickListener {
             (context as AppCompatActivity). supportFragmentManager.beginTransaction().replace(R.id.fragment_container_view,
-                PreviewFragment()
+                PreviewFragment.newInstance(
+                    name = cakes[position].name,
+                    price = cakes[position].price,
+                    image = cakes[position].image,
+                    description = holder.itemView.context.getString(R.string.sample)
+                )
             ).addToBackStack("").commit()
         }
 

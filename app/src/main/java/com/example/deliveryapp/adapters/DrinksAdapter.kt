@@ -41,7 +41,12 @@ class DrinksAdapter(val cakes: List<CakeModel>,val context: Context): RecyclerVi
         holder.itemView.findViewById<ImageView>(R.id.roundedImageView).setImageResource(cakes[position].image)
         holder.itemView.setOnClickListener {
             (context as AppCompatActivity). supportFragmentManager.beginTransaction().replace(R.id.fragment_container_view,
-                PreviewFragment()
+                PreviewFragment.newInstance(
+                    name = cakes[position].name,
+                    price = cakes[position].price,
+                    image = cakes[position].image,
+                    description = holder.itemView.context.getString(R.string.sample)
+                )
             ).addToBackStack("").commit()
         }
 //        holder.itemView.setOnClickListener {
