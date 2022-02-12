@@ -1,13 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/whiteuniv"
     android:fitsSystemWindows="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/cakes"
+        android:textStyle="bold"
+        android:layout_margin="30dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/seg_ui_semibold"
+        android:textColor="@color/black"
+        android:text="Drinks"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/cakes"
+        android:id="@+id/search"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/where"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_rounded_shape"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:focusable="false"
+            android:fontFamily="@font/lato"
+            android:hint="Search"
+            android:onClick="Focus"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#aeaeae"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
 
 
 
@@ -15,17 +56,17 @@
         android:id="@+id/cakesrecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/search"
         android:overScrollMode="never"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:paddingBottom="8dp"
         android:scrollbars="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         tools:itemCount="6"
-        tools:listitem="@layout/row_items"
-        tools:spanCount="2"/>
+        tools:listitem="@layout/itemlayout" />
 
 
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

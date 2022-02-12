@@ -24,7 +24,7 @@ class CakesFragment() : Fragment(), OnItemListener {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCakesBinding.inflate(layoutInflater, container, false)
-        val adapter = CakesAdapter(getCakes())
+        val adapter = CakesAdapter(getCakes(),requireActivity())
          adapter.setListener(this)
         _binding?.cakesrecyclerView?.adapter = adapter
        // _binding?.cakesrecyclerView?.layoutManager = GridLayoutManager(requireContext(),2)

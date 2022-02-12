@@ -1,6 +1,7 @@
 package com.example.deliveryapp.adapters
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -8,11 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.deliveryapp.*
 import com.example.deliveryapp.fragments.ClientFragmentInfo
+import com.example.deliveryapp.fragments.PreviewFragment
 import com.example.deliveryapp.interfaces.onUserInfo
+import com.example.deliveryapp.models.ClientInfo
 import com.example.deliveryapp.models.DelivererInfo
 import com.google.gson.Gson
 
-class DeliverersAdapters(val cakes: List<DelivererInfo>, val context: Context) :
+class DeliverersAdapters(val cakes: List<DelivererInfo>,val context: Context) :
     RecyclerView.Adapter<BaseViewHolder>(), onUserInfo {
     val gson: Gson = Gson()
 
@@ -32,6 +35,8 @@ class DeliverersAdapters(val cakes: List<DelivererInfo>, val context: Context) :
 
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
+
+
 
         holder.itemView.findViewById<TextView>(R.id.phoneD).text = cakes[position].phoneNumber
         holder.itemView.findViewById<TextView>(R.id.deliverer).text = cakes[position].firstName

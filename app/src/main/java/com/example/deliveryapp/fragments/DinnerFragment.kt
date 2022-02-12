@@ -25,8 +25,8 @@ class DinnerFragment : Fragment() {
         _binding = FragmentDinnerBinding.inflate(layoutInflater, container, false)
 
 
-        _binding?.cakesrecyclerView?.adapter = DinnersAdapter(getDinner())
-        _binding?.cakesrecyclerView?.layoutManager = GridLayoutManager(requireContext(),2)
+        _binding?.cakesrecyclerView?.adapter = DinnersAdapter(getDinner(),requireActivity())
+        //_binding?.cakesrecyclerView?.layoutManager = GridLayoutManager(requireContext(),2)
 
 
 

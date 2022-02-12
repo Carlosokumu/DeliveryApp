@@ -32,6 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:textStyle="bold"
+                android:id="@+id/txtFoodName"
                 android:layout_marginTop="@dimen/margin_small"
                 android:layout_marginLeft="@dimen/margin_normal"
                 android:textColor="@color/black"
@@ -42,6 +43,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:textStyle="bold"
+                android:id="@+id/likes"
                 android:layout_marginTop="@dimen/margin_small"
                 android:drawableEnd="@drawable/ic_favno"
                 android:drawablePadding="@dimen/margin_small"
@@ -55,6 +57,7 @@
                 android:layout_width="wrap_content"
                 android:textStyle="bold"
                 android:alpha="0.5"
+                android:id="@+id/price"
                 android:layout_marginTop="@dimen/margin_small"
                 android:drawablePadding="@dimen/margin_small"
                 android:layout_marginLeft="@dimen/margin_normal"

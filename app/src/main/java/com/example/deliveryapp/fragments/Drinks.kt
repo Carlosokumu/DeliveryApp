@@ -28,8 +28,8 @@ class Drinks : Fragment() {
         _binding = FragmentDrinksBinding.inflate(layoutInflater, container, false)
 
 
-        _binding?.cakesrecyclerView?.adapter =DrinksAdapter(getDrinks())
-        _binding?.cakesrecyclerView?.layoutManager = GridLayoutManager(requireContext(),2)
+        _binding?.cakesrecyclerView?.adapter =DrinksAdapter(getDrinks(),requireActivity())
+       // _binding?.cakesrecyclerView?.layoutManager = GridLayoutManager(requireContext(),2)
 
 
 

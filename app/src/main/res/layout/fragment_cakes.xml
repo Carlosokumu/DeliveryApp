@@ -53,7 +53,6 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/cakesrecyclerView"
-
         android:layout_marginTop="@dimen/margin_normal"
         android:layout_below="@+id/search"
         android:layout_width="match_parent"
