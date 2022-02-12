@@ -1,6 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Cake Order"
+            android:layout_gravity="end"
+            android:id="@+id/what"
+            android:layout_margin="@dimen/margin_small"
+            android:textColor="@color/border"
+            android:layout_height="wrap_content"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/picOderer"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_centerInParent="true"
+            app:civ_border_color="@color/black"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:src="@drawable/ic_account"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/picOderer"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Cake Order"
+                android:id="@+id/nameConfirm"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_below="@+id/picOderer"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="450ksh"
+                android:id="@+id/priceConfirm"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:layout_below="@+id/nameConfirm"
+                android:fontFamily="@font/segoe_ui_bold"
+                android:textColor="@color/border"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="300sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnOrder"
+                android:gravity="center"
+                android:drawablePadding="@dimen/margin_normal"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@+id/price"
+                android:layout_margin="16dp"
+                android:background="@drawable/addbac"
+                android:fontFamily="@font/lato"
+                android:text="Confirm Oder"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
